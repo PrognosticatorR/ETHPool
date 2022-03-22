@@ -34,15 +34,18 @@ module.exports = {
     },
   },
   networks: {
+    hardhat: {
+      accounts: { mnemonic: secretDevelopment.mnemonic },
+    },
     development: {
       accounts: { mnemonic: secretDevelopment.mnemonic },
-      url: "http://localhost:8545",
+      url: "http://127.0.0.1:8545",
       chainId: 1337,
       timeout: 200000000,
     },
-    "testnet-eth": {
+    testnet: {
       accounts: { mnemonic: secretTestnet.mnemonic },
-      url: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      url: secretTestnet.nodeUrl,
       chainId: 4,
     },
   },
@@ -57,17 +60,7 @@ module.exports = {
   namedAccounts: {
     deployer: {
       default: 0, // here this will by default take the first account as deployer
-      mainnet: "0x3F231E09f6e4e97E8fEc2F1E507414460C866F23",
-      "mainnet-eth": "0x3F231E09f6e4e97E8fEc2F1E507414460C866F23",
-      "mainnet-matic": "0x3F231E09f6e4e97E8fEc2F1E507414460C866F23",
       testnet: 0,
-    },
-    signer: {
-      default: 1, // here this will by default take the second account as feeCollector (so in the test this will be a different account than the deployer)
-      mainnet: "0xD2E49cfd5c03a72a838a2fC6bB5f6b46927e731A",
-      "mainnet-eth": "0xD2E49cfd5c03a72a838a2fC6bB5f6b46927e731A",
-      "mainnet-matic": "0xD2E49cfd5c03a72a838a2fC6bB5f6b46927e731A",
-      testnet: 1,
     },
   },
 };

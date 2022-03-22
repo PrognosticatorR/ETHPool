@@ -1,7 +1,9 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "deploy:testnet": "npx hardhat deploy --network testnet",
+    "check-balance": "HARDHAT_NETWORK=testnet node ./scripts/getContractBalance.js"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
@@ -12,9 +14,8 @@
     "ethers": "^5.6.1",
     "hardhat": "^2.9.1",
     "hardhat-contract-sizer": "^2.5.1",
-    "hardhat-deploy": "^0.11.1"
-  },
-  "dependencies": {
+    "hardhat-deploy": "^0.11.1",
     "@openzeppelin/contracts": "^4.5.0"
-  }
+  },
+  "dependencies": {}
 }
