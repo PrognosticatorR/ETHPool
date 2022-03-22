@@ -6,7 +6,7 @@
     yarn install
 ```
 
-### add secrets
+## Configure Project
 
 add required configurations after running following script see `sample.secret.json` for refrence
 
