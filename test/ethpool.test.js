@@ -199,23 +199,6 @@ describe("ETHPool", function () {
       expect(newBalance1).to.be.within(balance1, balance1.add(twentyEthers)); // Original Balance + 20 ethers
     });
 
-    // it("Should add and remove team member", async function () {
-    //   const txAdd = await (await ethpool.addTeamMember(accounts[1].address)).wait();
-    //   const txRemove = await (
-    //     await ethpool.removeTeamMember(addr1.address)
-    //   ).wait();
-
-    //   expect(
-    //     txAdd.events?.filter((x) => {
-    //       return x.event == "RoleGranted";
-    //     })
-    //   ).to.not.be.null;
-    //   expect(
-    //     txRemove.events?.filter((x) => {
-    //       return x.event == "RoleRevoked";
-    //     })
-    //   ).to.not.be.null;
-    // });
   });
   describe("test AccessControll", () => {
     it("Should addTeamMember", async () => {
