@@ -21,5 +21,6 @@ Try running some of the following commands:
 
     yarn deploy:testnet
     yarn check-balance
+    yarn test
 
 ```
