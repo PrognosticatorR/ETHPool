@@ -2,7 +2,9 @@
 
 ## install dependencies
 
-```yarn install
+```
+    yarn install
+```
 
 Try running some of the following commands:
 
@@ -10,7 +12,5 @@ Try running some of the following commands:
 
     yarn deploy:testnet
     yarn check-balance
-
-```
 
 ```
